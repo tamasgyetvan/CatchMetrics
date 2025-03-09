@@ -1,5 +1,11 @@
+import { CountDownTimer } from "./components/CountDownTimer/CountDownTimer";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <CountDownTimer duration={300} />
+    </>
+  );
 }
 
 export default App;
