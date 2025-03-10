@@ -2,14 +2,18 @@ import { FormEventHandler } from "react";
 
 type CountDownSetterProps = {
   handleChange: FormEventHandler<HTMLFormElement>;
+  disabled: boolean;
 };
 
-export function CountDownSetter({ handleChange }: CountDownSetterProps) {
+export function CountDownSetter({
+  handleChange,
+  disabled,
+}: CountDownSetterProps) {
   return (
     <form onChange={handleChange}>
       <label>
         Set timer (minutes):
-        <select name="timer" id="timer">
+        <select name="timer" id="timer" disabled={disabled}>
           <option value="2">2 minutes</option>
           <option value="3">3 minutes</option>
           <option value="5">5 minutes</option>
