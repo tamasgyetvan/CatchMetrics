@@ -5,23 +5,23 @@ import { useEffect, useState } from "react";
 export function CountDown() {
   const [disabled, setDisabled] = useState<boolean>(false); //Stores boolean that is used to disable CountDownSetter form when a timer is running
   const [isRunning, setIsRunning] = useState<boolean>(false); //Stores boolean that is used to control the running of timer
-  const [latestDuration, setLatestDuration] = useState<number>(120); //Stores the latest duration set
-  const [duration, setDuration] = useState<number>(120); //Stores remaining time
+  const [remainingTime, setRemainingTime] = useState<number>(120); //Stores remaining time
+  const [duration, setDuration] = useState<number>(120); //Stores time set by the input
 
   function handleDurationChange(event: React.FormEvent) {
     const target = event.target as HTMLInputElement;
     const value = Number(target.value) * 60;
     setDuration(value);
-    setLatestDuration(value);
+    setRemainingTime(value);
   }
   useEffect(() => {
     if (isRunning) {
       const timer = setInterval(() => {
-        if (duration > 0) {
-          setDuration(duration - 1);
+        if (remainingTime > 0) {
+          setRemainingTime(remainingTime - 1);
         } else {
           clearInterval(timer);
-          setDuration(0);
+          setRemainingTime(0);
         }
       }, 1000);
       return () => clearInterval(timer);
@@ -33,7 +33,7 @@ export function CountDown() {
         handleChange={handleDurationChange}
         disabled={disabled}
       ></CountDownSetter>
-      <CountDownTimer duration={duration}></CountDownTimer>
+      <CountDownTimer remainingTime={remainingTime}></CountDownTimer>
       <button
         onClick={() => {
           setIsRunning(true);
@@ -52,7 +52,7 @@ export function CountDown() {
       </button>
       <button
         onClick={() => {
-          setDuration(latestDuration);
+          setRemainingTime(duration);
         }}
       >
         Reset latest timer
