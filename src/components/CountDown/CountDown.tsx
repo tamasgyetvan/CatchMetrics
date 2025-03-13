@@ -23,6 +23,7 @@ export function CountDown() {
         } else {
           clearInterval(timer);
           setRemainingTime(0);
+          setIsRunning(false);
         }
       }, 1000);
       return () => clearInterval(timer);
@@ -64,7 +65,10 @@ export function CountDown() {
               setDisabled(true);
             }}
           >
-            <img src="src/assets/play-button-svgrepo-com.svg" alt="Start" />
+            <img
+              src="src/assets/rewind-forward-circle-svgrepo-com.svg"
+              alt="Start"
+            />
           </button>
         )}
         <button
