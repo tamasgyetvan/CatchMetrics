@@ -40,39 +40,45 @@ export function CountDown() {
         handleChange={handleDurationChange}
         disabled={disabled}
       ></CountDownSetter>
-      {isRunning ? (
+
+      <div className={styles.container}>
+        {isRunning ? (
+          <button
+            className={styles.pauseButton}
+            onClick={() => {
+              setIsRunning(false);
+              setDisabled(false);
+            }}
+          >
+            <img
+              src="src/assets/pause-circle-svgrepo-com.svg"
+              alt="Pause"
+              className={styles.icon}
+            />
+          </button>
+        ) : (
+          <button
+            className={styles.startButton}
+            onClick={() => {
+              setIsRunning(true);
+              setDisabled(true);
+            }}
+          >
+            <img src="src/assets/play-button-svgrepo-com.svg" alt="Start" />
+          </button>
+        )}
         <button
-          className={styles.pauseButton}
+          className={styles.restartButton}
           onClick={() => {
-            setIsRunning(false);
-            setDisabled(false);
+            setRemainingTime(duration);
           }}
         >
           <img
-            src="src/assets/pause-circle-svgrepo-com.svg"
-            alt="Pause"
-            className={styles.icon}
+            src="src/assets/restart-circle-svgrepo-com(1).svg"
+            alt="Restart"
           />
         </button>
-      ) : (
-        <button
-          className={styles.startButton}
-          onClick={() => {
-            setIsRunning(true);
-            setDisabled(true);
-          }}
-        >
-          <img src="src/assets/play-button-svgrepo-com.svg" alt="Start" />
-        </button>
-      )}
-      <button
-        className={styles.restartButton}
-        onClick={() => {
-          setRemainingTime(duration);
-        }}
-      >
-        <img src="src/assets/restart-circle-svgrepo-com(1).svg" alt="Restart" />
-      </button>
+      </div>
     </div>
   );
 }

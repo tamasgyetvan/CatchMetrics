@@ -5,6 +5,10 @@
   border-radius: 25px;
   padding: 10px;
   background-color: #ffe2e5;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .icon {

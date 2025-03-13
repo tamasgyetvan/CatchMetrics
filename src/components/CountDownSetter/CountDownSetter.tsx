@@ -1,5 +1,5 @@
 import { FormEventHandler } from "react";
-
+import styles from "./CountDownSetter.module.css";
 type CountDownSetterProps = {
   handleChange: FormEventHandler<HTMLFormElement>;
   disabled: boolean;
@@ -10,10 +10,14 @@ export function CountDownSetter({
   disabled,
 }: CountDownSetterProps) {
   return (
-    <form onChange={handleChange}>
-      <label>
-        Set timer (minutes):
-        <select name="timer" id="timer" disabled={disabled}>
+    <form className={styles.form} onChange={handleChange}>
+      <label className={styles.label}>
+        Duration:
+        <select
+          name="timerSetter"
+          className={styles.timerSetter}
+          disabled={disabled}
+        >
           <option value="2">2 minutes</option>
           <option value="3">3 minutes</option>
           <option value="5">5 minutes</option>
