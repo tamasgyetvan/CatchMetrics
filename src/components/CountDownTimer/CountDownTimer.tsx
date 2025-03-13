@@ -5,7 +5,7 @@ type CountDownTimerProps = {
 };
 export function CountDownTimer({ remainingTime }: CountDownTimerProps) {
   return (
-    <div className={styles.CountDownTimer}>
+    <div className={styles.countDownTimer}>
       {Math.floor(remainingTime / 60)}:{remainingTime % 60}
     </div>
   );

@@ -10,3 +10,27 @@
 .icon {
   width: 40px;
 }
+
+.pauseButton {
+  background: none;
+  border: none;
+  img {
+    width: 40px;
+  }
+}
+
+.startButton {
+  background: none;
+  border: none;
+  img {
+    width: 40px;
+  }
+}
+
+.restartButton {
+  background: none;
+  border: none;
+  img {
+    width: 40px;
+  }
+}

@@ -42,29 +42,36 @@ export function CountDown() {
       ></CountDownSetter>
       {isRunning ? (
         <button
+          className={styles.pauseButton}
           onClick={() => {
             setIsRunning(false);
             setDisabled(false);
           }}
         >
-          Stop
+          <img
+            src="src/assets/pause-circle-svgrepo-com.svg"
+            alt="Pause"
+            className={styles.icon}
+          />
         </button>
       ) : (
         <button
+          className={styles.startButton}
           onClick={() => {
             setIsRunning(true);
             setDisabled(true);
           }}
         >
-          Start
+          <img src="src/assets/play-button-svgrepo-com.svg" alt="Start" />
         </button>
       )}
       <button
+        className={styles.restartButton}
         onClick={() => {
           setRemainingTime(duration);
         }}
       >
-        Reset latest timer
+        <img src="src/assets/restart-circle-svgrepo-com(1).svg" alt="Restart" />
       </button>
     </div>
   );
