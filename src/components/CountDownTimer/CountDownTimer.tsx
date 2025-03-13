@@ -1,10 +1,10 @@
 type CountDownTimerProps = {
-  duration: number;
+  remainingTime: number;
 };
-export function CountDownTimer({ duration }: CountDownTimerProps) {
+export function CountDownTimer({ remainingTime }: CountDownTimerProps) {
   return (
     <div>
-      Minutes:{Math.floor(duration / 60)} Seconds: {duration % 60}{" "}
+      Minutes:{Math.floor(remainingTime / 60)} Seconds: {remainingTime % 60}{" "}
     </div>
   );
 }
