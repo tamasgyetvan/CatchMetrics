@@ -40,22 +40,25 @@ export function CountDown() {
         handleChange={handleDurationChange}
         disabled={disabled}
       ></CountDownSetter>
-      <button
-        onClick={() => {
-          setIsRunning(true);
-          setDisabled(true);
-        }}
-      >
-        Start
-      </button>
-      <button
-        onClick={() => {
-          setIsRunning(false);
-          setDisabled(false);
-        }}
-      >
-        Stop
-      </button>
+      {isRunning ? (
+        <button
+          onClick={() => {
+            setIsRunning(false);
+            setDisabled(false);
+          }}
+        >
+          Stop
+        </button>
+      ) : (
+        <button
+          onClick={() => {
+            setIsRunning(true);
+            setDisabled(true);
+          }}
+        >
+          Start
+        </button>
+      )}
       <button
         onClick={() => {
           setRemainingTime(duration);
