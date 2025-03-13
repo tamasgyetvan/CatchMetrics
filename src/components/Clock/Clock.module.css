@@ -1,0 +1,23 @@
+.clock {
+  font-weight: 600;
+  font-size: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 10px;
+  width: 50%;
+  height: 150px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 25px;
+  background-color: #fff4de;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.icon {
+  width: 40px;
+}

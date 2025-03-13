@@ -1,6 +1,7 @@
 import { CountDownSetter } from "../CountDownSetter/CountDownSetter";
 import { CountDownTimer } from "../CountDownTimer/CountDownTimer";
 import { useEffect, useState } from "react";
+import styles from "./CountDown.module.css";
 
 export function CountDown() {
   const [disabled, setDisabled] = useState<boolean>(false); //Stores boolean that is used to disable CountDownSetter form when a timer is running
@@ -28,12 +29,17 @@ export function CountDown() {
     }
   });
   return (
-    <div className="countDown">
+    <div className={styles.countDown}>
+      <img
+        src="src/assets/timer-svgrepo-com.svg"
+        className={styles.icon}
+        alt="Timer Logo"
+      />
+      <CountDownTimer remainingTime={remainingTime}></CountDownTimer>
       <CountDownSetter
         handleChange={handleDurationChange}
         disabled={disabled}
       ></CountDownSetter>
-      <CountDownTimer remainingTime={remainingTime}></CountDownTimer>
       <button
         onClick={() => {
           setIsRunning(true);

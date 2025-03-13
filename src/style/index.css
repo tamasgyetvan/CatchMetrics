@@ -1,0 +1,5 @@
+@import "../style/fonts.css";
+@import "../style/reset.css";
+@import "../components/Clock/Clock.module.css";
+@import "../components/CountDown/CountDown.module.css";
+@import "../components/CountDownTimer/CountDownTimer.module.css";
