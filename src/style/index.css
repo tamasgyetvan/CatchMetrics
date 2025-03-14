@@ -3,3 +3,4 @@
 @import "../components/Clock/Clock.module.css";
 @import "../components/CountDown/CountDown.module.css";
 @import "../components/CountDownTimer/CountDownTimer.module.css";
+@import "../style/colors.css";
