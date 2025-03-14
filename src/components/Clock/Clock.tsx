@@ -23,7 +23,7 @@ export function Clock() {
   return (
     <div className={styles.clock}>
       <img
-        src="src/assets/clock-two-svgrepo-com(1).svg"
+        src="/clock-two-svgrepo-com(1).svg"
         alt="Clock Logo"
         className={styles.icon}
       />

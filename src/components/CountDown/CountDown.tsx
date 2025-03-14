@@ -32,7 +32,7 @@ export function CountDown() {
   return (
     <div className={styles.countDown}>
       <img
-        src="src/assets/timer-svgrepo-com.svg"
+        src="/timer-svgrepo-com.svg"
         className={styles.icon}
         alt="Timer Logo"
       />
@@ -52,7 +52,7 @@ export function CountDown() {
             }}
           >
             <img
-              src="src/assets/pause-circle-svgrepo-com.svg"
+              src="/pause-circle-svgrepo-com.svg"
               alt="Pause"
               className={styles.icon}
             />
@@ -65,10 +65,7 @@ export function CountDown() {
               setDisabled(true);
             }}
           >
-            <img
-              src="src/assets/rewind-forward-circle-svgrepo-com.svg"
-              alt="Start"
-            />
+            <img src="/rewind-forward-circle-svgrepo-com.svg" alt="Start" />
           </button>
         )}
         <button
@@ -77,10 +74,7 @@ export function CountDown() {
             setRemainingTime(duration);
           }}
         >
-          <img
-            src="src/assets/restart-circle-svgrepo-com(1).svg"
-            alt="Restart"
-          />
+          <img src="/restart-circle-svgrepo-com.svg" alt="Restart" />
         </button>
       </div>
     </div>

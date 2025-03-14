@@ -18,16 +18,13 @@ export function Net({ title }: NetProps) {
             className={styles.increment}
             onClick={() => setCount(count + 1)}
           >
-            <img src="src/assets/add-circle-svgrepo-com.svg" alt="Increment" />
+            <img src="/add-circle-svgrepo-com.svg" alt="Increment" />
           </button>
           <button
             className={styles.decrement}
             onClick={() => (count == 0 ? setCount(0) : setCount(count - 1))}
           >
-            <img
-              src="src/assets/minus-circle-svgrepo-com.svg"
-              alt="Decrement"
-            />
+            <img src="/minus-circle-svgrepo-com.svg" alt="Decrement" />
           </button>
         </div>
       </div>
@@ -39,16 +36,13 @@ export function Net({ title }: NetProps) {
             className={styles.increment}
             onClick={() => setWeight(weight + 1)}
           >
-            <img src="src/assets/add-circle-svgrepo-com.svg" alt="Increment" />
+            <img src="/add-circle-svgrepo-com.svg" alt="Increment" />
           </button>
           <button
             className={styles.decrement}
             onClick={() => (weight == 0 ? setWeight(0) : setWeight(weight - 1))}
           >
-            <img
-              src="src/assets/minus-circle-svgrepo-com.svg"
-              alt="Decrement"
-            />
+            <img src="/minus-circle-svgrepo-com.svg" alt="Decrement" />
           </button>
         </div>
       </div>

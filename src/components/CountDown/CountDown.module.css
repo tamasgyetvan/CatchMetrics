@@ -15,26 +15,15 @@
   width: 40px;
 }
 
-.pauseButton {
-  background: none;
-  border: none;
-  img {
-    width: 40px;
-  }
-}
-
-.startButton {
-  background: none;
-  border: none;
-  img {
-    width: 40px;
-  }
-}
-
+.pauseButton,
+.startButton,
 .restartButton {
   background: none;
   border: none;
-  img {
-    width: 40px;
+  margin: 0;
+  padding: 0;
+
+  > img {
+    width: 35px;
   }
 }
