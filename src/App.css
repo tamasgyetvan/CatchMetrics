@@ -1,5 +1,9 @@
 .app {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "clock countdown"
+    "netcontainer netcontainer";
   gap: 10px;
   padding: 10px;
 }
