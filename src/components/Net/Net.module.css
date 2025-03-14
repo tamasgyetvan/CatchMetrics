@@ -1,0 +1,54 @@
+.net {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 25px;
+  background-color: white;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "counter weight";
+}
+
+.counter,
+.weight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+
+  > h3 {
+    font-size: 1.8rem;
+  }
+
+  > p {
+    font-size: 1.6rem;
+  }
+}
+.counter {
+  grid-area: counter;
+  align-items: flex-start;
+}
+
+.weight {
+  grid-area: weight;
+  align-items: flex-end;
+}
+
+.title {
+  margin: 0 auto;
+  grid-area: title;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.increment,
+.decrement {
+  background: none;
+  border: none;
+
+  > img {
+    width: 30px;
+  }
+}
